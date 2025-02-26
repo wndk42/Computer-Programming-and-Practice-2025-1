@@ -1,3 +1,5 @@
+int add1(int x);
+
 /* 
 	함수 이름: add1
 	입력값: int x
