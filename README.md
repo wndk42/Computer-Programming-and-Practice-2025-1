@@ -36,3 +36,9 @@
 * Visual Studio에서 프로젝트 만들기
 
 * Github Desktop으로 코드 업로드하기
+
+-------
+
+## 참고 문헌
+
+* C 언어 문법과 규칙은 [C89 표준](https://port70.net/~nsz/c/c89/c89-draft.html)의 일부를 번역해서 작성했습니다.
