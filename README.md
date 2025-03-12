@@ -19,7 +19,7 @@ int main() {
 3.3.2.2 Function calls
 > Semantics
 >
-> ... expression followed by parentheses () containing a possibly empty ... is a function call.
+> ... expression followed by parentheses () ... is a function call.
 > 
 > ... expression denotes the called function. ...
 >
