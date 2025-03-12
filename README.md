@@ -14,3 +14,11 @@ int main() {
    return main(); /* 자신을 무한히 호출해서 에러가 발생합니다 */
 }
 ```
+
+#### 관련 C89 표준
+3.3.2.2 Function calls
+> Semantics
+>
+> ... expression followed by parentheses () containing a possibly empty ... is a function call.
+> ... expression denotes the called function. ...
+> ... Recursive function calls shall be permitted, both directly and indirectly through any chain of other functions.
