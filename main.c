@@ -4,8 +4,10 @@
 	프로젝트에 해당 소스 파일이 등록되어 있으면, 선언된 함수를 쓸 수 있습니다.
 */
 
-/* To Do: add1 함수 선언하기. 결과값종류: int, 입력값종류: int */
+int value(int);
 
 int main() {
-	return add1(1); /* 2를 반환한다. */
+	return value(1); /* 1을 반환한다. */
 }
+
+/* To Do: value.c 소스 파일을 만들고, 새로 만든 파일에서 value 함수를 정의해보세요 */
