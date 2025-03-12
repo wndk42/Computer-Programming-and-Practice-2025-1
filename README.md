@@ -40,3 +40,4 @@
 ## 참고 문헌
 
 * C 언어 문법과 규칙은 [C89 표준](https://port70.net/~nsz/c/c89/c89-draft.html)의 일부를 번역해서 작성했습니다.
+* C 코드 예시는 [cppreference.com](https://en.cppreference.com/w/c)를 참조했습니다.
