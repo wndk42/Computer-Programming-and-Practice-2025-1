@@ -10,3 +10,13 @@
 /* 반환 타입이 void고, 이름이 x인 함수의 선언 */
 void x();
 ```
+
+#### 관련 C89 표준
+3.5.4.3 Function declarators (including prototypes)
+> Semantics
+>
+> If, in the declaration "T D1", D1 has the form
+>
+> D( ... )
+>
+> ... then the type specified for ident is " ... function returning T." 
