@@ -20,5 +20,7 @@ int main() {
 > Semantics
 >
 > ... expression followed by parentheses () containing a possibly empty ... is a function call.
+> 
 > ... expression denotes the called function. ...
+>
 > ... Recursive function calls shall be permitted, both directly and indirectly through any chain of other functions.
