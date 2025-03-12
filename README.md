@@ -7,6 +7,7 @@
 #### 코드 예시:
 ```c
 /* main.c */
+
 int value(int); /* 반환타입이 int고, 매개변수타입도 int인 함수 value를 선언 */
 
 int main() {
@@ -16,6 +17,7 @@ int main() {
 
 ```c
 /* value.c */
+
 int value(int); /* value 함수 선언 */
 
 /* value 함수 정의 */
