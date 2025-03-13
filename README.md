@@ -38,3 +38,7 @@ int x(); /* 반환 타입이 int고, 이름이 x고, 매개변수에 대해서�
 > For two function types to be compatible, both shall specify compatible retury types.
 > Moreover, the paremeter type lists, ... , shall agree in the number of parameters ... ;
 > corresponding parameters shall have compatible types. ...
+
+1.6 DEFINITION OF TERMS
+> Parameter --- an object declared as part of a function declaration or definition
+> that acquires a value on entry to the function, or ...
