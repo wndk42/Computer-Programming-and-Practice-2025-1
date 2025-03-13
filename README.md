@@ -19,3 +19,22 @@ int g(int a, int b); /* 이름이 g고, 함수 종류는 f와 동일한 함수�
 int h(void); /* 반환 타입이 int고, 이름이 h고, 매개변수가 없는 함수의 선언 */
 int x(); /* 반환 타입이 int고, 이름이 x고, 매개변수에 대해서는 정하지 않은 함수의 선언 */
 ```
+
+### 관련 C 표준
+3.5.4.3 Function declarators (including prototypes)
+> Semantics
+> 
+> A parameter type list specifies the types of, and may declare identifiers for, the parameters of the function.
+> ... The special case of void as the only item in the list specifies that the function has no parameters.
+
+3.5 DECLARATIONS
+> Constraints
+>
+> All declarations in the same scope that refer to the same object or function shall specify compatible types.
+
+3.5.4.3 Function declarators (including prototypes)
+> Semantics
+>
+> For two function types to be compatible, both shall specify compatible retury types.
+> Moreover, the paremeter type lists, ... , shall agree in the number of parameters ... ;
+> corresponding parameters shall have compatible types. ...
