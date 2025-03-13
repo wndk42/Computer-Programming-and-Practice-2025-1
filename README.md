@@ -39,3 +39,16 @@ int x() {
 >
 > If a return statement without an expression is executed, and the value of the function call is used by the caller, the behavior is undefined.
 > Reaching the } that terminates a function is equivalent to executing a return statement without an expression.
+
+1.6 DEFINITIONS OF TERMS
+> * Undefined behavior --- behavior, upon use of a nonportable or erroneous program construct,
+> of erroneous data, or of indeterminately-valued objects, for which the Standard imposes no requirements.
+> Permissible undefined behavior ranges from ignoring the situation completely with
+> unpredictable results, to behaving during translation or program execution in a documented
+> manner characteristic of the environment (with or without the issuance of a diagnostic message),
+> to terminating a translation or execution (with the issuance of a diagnostic message).
+>
+> If a "shall" or "shall not" requirement that appears outside of a constraint is violated,
+> the behavior is undefined. Undefined behavior is otherwise indicated in this Standard by the words
+> "undefined behavior" or by the omission of any explicit definition of behavior.
+> There is no difference in emphasis among these three; they all describe "behavior that is undefined."
