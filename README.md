@@ -14,3 +14,25 @@ int main() {
    printf("C"); /* 화면에 C가 출력됩니다. */
 }
 ```
+
+#### 관련 C89 표준
+4.9.6.3 The printf function
+> Description
+>
+> The printf function is equivalent to fprintf with the argument stdout interposed before the arguments to printf.
+>
+> Returns
+> The printf function returns the number of characters transmitted, or a negative value if an output error occurred.
+
+4.9.6.1 The fprintf function
+> Description
+>
+> The fprintf function writes output to the stream pointed to by stream,
+> under control of the string pointed to by format that specifies how subsequent arguments are converted
+> for output. ...
+>
+> Returns
+> The fprintf function returns the number of characters transmitted, or a negative value if an output error occrured.
+
+4.9.1 Introduction
+> stdout ... point to the ... standard ... output ...
