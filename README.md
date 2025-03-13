@@ -25,3 +25,14 @@ int value(int x) {
    return x;
 }
 ```
+
+#### 관련 C 표준
+2.1.1.1 Program structure
+> A C program need not all be translated at the same time.
+> The text of the program is kept in units called source files in this Standard.
+> A source file ... is called a translation unit.
+> ... The seperate translation units of a program communicate by (for example) calls to functions
+> whose identifiers have external linkage,
+> by manipulation of objects whose identifiers have external linkage,
+> and by manipulation of data files.
+> Translation units may be separately translated and then later linked to produce an executable program.
