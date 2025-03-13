@@ -23,6 +23,10 @@ int x() {
 
 #### 관련 C89 표준
 3.6.6.4 The return statement
+> Constraints
+>
+> A return statement with an expression shall not appear in a function whose return type is void.
+> 
 > Semantics
 >
 > A return statement terminates execution of the current function and returns control to its caller.
