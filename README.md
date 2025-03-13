@@ -40,7 +40,3 @@ int get_x() {
 >then the behavior is exactly as if the translation unit contains a file scope declaration of that identifier,
 >with an initializer equal to 0. ...
 
-
-
-
->A
