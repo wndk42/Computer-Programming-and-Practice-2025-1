@@ -17,3 +17,21 @@ int f(int a, int b) { return a; } /* 첫번째 매개변수를 반환하는 함�
 int g(int a, int b) { return b; } /* 두번째 매개변수를 반환하는 함수 */
 int h(void) { return 1; } /* 1을 반환하는 함수 */
 ```
+
+### 관련 C 표준
+3.7.1 Function definitions
+> Constraints
+>
+> If the declarator includes a parameter type list,
+> the declaration of each parameter shall include an identifier
+> (except for the specifal case of a parameter list consisting of a single parameter of type void,
+> in which there shall not be an identifier).
+>
+> Semantics
+>
+> ... parameter type list ... specifies the types of all the parameters;
+> ... also servers as a function prototype for later calls to the same function in the same translation unit.
+> ...
+> 
+> On entry to the function the value of each argument expression shall be converted to the
+> type of its corresponding parameter, as if by assignment to the parameter. ...
