@@ -28,7 +28,10 @@ int x() {
 > A return statement terminates execution of the current function and returns control to its caller.
 > A function may have any number of return statements, with and without expressions.
 >
-> If a return statement with an expression is executed, the value of the expression is returned to the caller as the value of the function call expression. ...
+> If a return statement with an expression is executed,
+> the value of the expression is returned to the caller as the value of the function call expression.
+> If the expression has a type different from that of the function in which it appears,
+> it is converted as if it were assigned to an object of that type
 >
 > If a return statement without an expression is executed, and the value of the function call is used by the caller, the behavior is undefined.
 > Reaching the } that terminates a function is equivalent to executing a return statement without an expression.
