@@ -35,4 +35,4 @@ int main() {
 > The fprintf function returns the number of characters transmitted, or a negative value if an output error occrured.
 
 4.9.1 Introduction
-> stdout ... point to the ... standard ... output ...
+> stdout ... point to the ... standard ... output streams.
