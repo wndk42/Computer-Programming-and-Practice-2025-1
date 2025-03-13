@@ -20,7 +20,7 @@ int h(void); /* 반환 타입이 int고, 이름이 h고, 매개변수가 없는 
 int x(); /* 반환 타입이 int고, 이름이 x고, 매개변수에 대해서는 정하지 않은 함수의 선언 */
 ```
 
-### 관련 C 표준
+#### 관련 C 표준
 3.5.4.3 Function declarators (including prototypes)
 > Semantics
 > 
