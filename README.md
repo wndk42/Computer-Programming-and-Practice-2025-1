@@ -19,3 +19,28 @@ int get_x() {
    return x; /* 함수 정의의 문장리스트에서 x의 값에 접근 가능 */
 }
 ```
+
+# 관련 C89 표준
+3.7 EXTERNAL DEFINITIONS
+>
+>Semantics
+>... An external definition is an external declaration that is also a definition of a function or an object
+>If an identifier declared with external linkage is used in an expressioin (...),
+>somewhere in the entire program there shall exactly one external definition for the identifier.
+
+3.7.2 External object definitions
+>
+>Semantics
+>If the declaration of an identifier has file scope and an initializer,
+>the declaration is an external definition for the identifier.
+>
+>A declaration of an identifier for an object that has file scope without an initializer, ..., constitutes a tentative definition.
+>If a translation unit contains one or more tentative definitions for an identifier,
+>and the translation unit contains no external definition for that identifier,
+>then the behavior is exactly as if the translation unit contains a file scope declaration of that identifier,
+>with an initializer equal to 0. ...
+
+
+
+
+>A
