@@ -24,6 +24,7 @@ int get_x() {
 3.7 EXTERNAL DEFINITIONS
 >
 >Semantics
+>
 >... An external definition is an external declaration that is also a definition of a function or an object
 >If an identifier declared with external linkage is used in an expressioin (...),
 >somewhere in the entire program there shall exactly one external definition for the identifier.
@@ -31,6 +32,7 @@ int get_x() {
 3.7.2 External object definitions
 >
 >Semantics
+>
 >If the declaration of an identifier has file scope and an initializer,
 >the declaration is an external definition for the identifier.
 >
