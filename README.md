@@ -17,7 +17,7 @@ int x() {
 
 #### 관련 C89 표준
 [3.1.3.2 Integer constants](https://port70.net/~nsz/c/c89/c89-draft.html#3.1.3.2)
-> Description
+> **Description**
 >
 > An integer constant begins with a digit, but has no period or exponent part.
 > It may have a prefix that specifies its base and a suffix that specifies its type.
@@ -27,7 +27,7 @@ int x() {
 > A hexadecimal constant consists of the prefix 0x or 0X followed by a sequence of the decimal digits
 > and the letters a (or A) through f (or F) with values 1o through 15 respectively.
 >
-> Semantics
+> **Semantics**
 >
 > The value of a decimal constant is computed base 10; that of an octal constant, base 8;
 > that of a hexadecimal constant, base 16. The lexically first digit is the most significant.
