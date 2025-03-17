@@ -1,40 +1,68 @@
-# 정수 값
-10진수, 16진수, 8진수로 정수값을 표현할 수 있습니다.   
+# 문자 값
+문자 값은 문자에 해당하는 정수를 나타냅니다.   
 
-10진수는 `1-9숫자` `0-9숫자` 형태로 씁니다. `0-9`숫자는 없어도 되고 여러개 있어도 됩니다. 
+`'` `문자` `'` 형태로 씁니다. `문자`는 작은 따옴표 `'`, 역슬래시 `\`, 엔터를 제외하고 모두 가능합니다.  
 
-16진수는 `0x` `0-f숫자` 형태로 씁니다. `0-f`숫자는 1개 이상 있어야 합니다. 대문자로 써도 됩니다. 
+특수문자도 문자로 가능합니다. 
 
-8진수는 `0` `0-7` 형태로 씁니다. `0-7`숫자는 없어도 되고 여러개 있어도 됩니다. 
+각 문자에 해당하는 정수는 컴파일러에서 정합니다. 
 
+문자가 여러개 있을 경우, 한국어 사용 등의 경우에 해당하는 정수도 컴파일러에서 정합니다.  
 
 #### 코드 예시:
 ```c
-int x() {
-   return 0x01; /* 1을 반환합니다. */
-}
+int c = 'a'; /* 'a'는 문자 a에 해당하는 정수 값을 의미합니다 */
 ```
 
 #### 관련 C89 표준
-[3.1.3.2 Integer constants](https://port70.net/~nsz/c/c89/c89-draft.html#3.1.3.2)
+[3.1.3.4 Character constants](https://port70.net/~nsz/c/c89/c89-draft.html#3.1.3.4)
 > **Description**
 >
-> An integer constant begins with a digit, but has no period or exponent part.
-> It may have a prefix that specifies its base and a suffix that specifies its type.
->
-> A decimal constant begins with a nonzero digits and consists of a sequence of decimal digits.
-> An octal constant consists of the prefix 0 optionally followed by a sequence of the digits 0 through 7 only.
-> A hexadecimal constant consists of the prefix 0x or 0X followed by a sequence of the decimal digits
-> and the letters a (or A) through f (or F) with values 1o through 15 respectively.
+> An integer character constant is a sequence of one or more multibyte characters enclosed in single-quotes, as in 'x' or 'ab'.
+> ... With a few exceptions detailed later, the elementes of the sequence are any members of the source character set;
+> they are mapped in an implementation-defined manner to members of the execution character set.
 >
 > **Semantics**
 >
-> The value of a decimal constant is computed base 10; that of an octal constant, base 8;
-> that of a hexadecimal constant, base 16. The lexically first digit is the most significant.
+> An integer character constant has type int.
+> The value of an integer character constant containing a single character that maps into a member of the basic execution character set
+> is the numerical value of the representation of the mapped character interpreted as an integer.
+> The value of an integer character constant containing more than one character, or containing a character or escape sequence
+> not represented in the basic execution character set, is implementation-defined. ...
+
+[2.2.1 Character sets](https://port70.net/~nsz/c/c89/c89-draft.html#2.2.1)
+> Two sets of characters and their associated collating sequences shall be defined:
+> the set in which source files are written, and the set interpreted in the execution environment.
+> The value of the members of the execution character set are implementation-defined; ...
 >
-> The type of an integer constant is the first of the corresponding list in which its value can be represented.
-> Unsuffixed decimal: int, long int, unsigned long int;
-> unsuffixed octal or hexadecimal: int, unsigned int, long int, unsigned long int;
-> suffixed by the letter u or U: unsigned int, unsigned long int;
-> suffixed by the letter l or L: long int, unsigned long int;
-> suffixed by both the letters u or U and l or L: unsigned long int.
+> In a character constant or string literal, members of the execution character set shall be represented by corresponding members of
+> the source character set or by escape sequences consisting of the backslash \ followed by one or more characters.
+> A byte with all bits set to 0, called the null character, shall exist in the basic execution character set; ...
+>
+> Both the basic source and basic execution character sets shall have at least the following members:
+> the 26 upper-case letters of the English alphabet
+>
+> A B C D E F G H I J K L M
+>
+> N O P Q R S T U V W X Y Z
+>
+> the 26 lower-case letters of the English alphabet
+>
+> a b c d e f g h i j k l m
+>
+> n o p q r s t u v w x y z
+>
+> the 10 decimal digits
+>
+> 0 1 2 3 4 5 6 7 8 9
+>
+> the following 29 graphic characters
+>
+> ~ " # % & ' ( ) * + , - . / :
+> ; < = > ? [ \ ] ^ _ { | } ~
+>
+> the space character, and control characters representing horizontal tab, vertical tab, and form feed.
+>
+> ... In source files, there shall be some way of indicating the end of each line of text;
+> ... In execution character set, there shall be control characters representing alert, backspace, carriage return, and new line.
+> If any other characters are encountered in a source file (except in a preprocessing token ... ), the behavior is undefined.
