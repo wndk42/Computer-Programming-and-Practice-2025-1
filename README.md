@@ -14,17 +14,19 @@
 
 * 정수 타입
 
-* include 지시어
+* 배열 타입
 
-* stdio.h 라이브러리의 printf 함수
-
-* 식 문장
+* 포인터 타입
 
 * 문자열
 
 * 변수의 주소
 
-* 포인터 타입
+* include 지시어
+
+* stdio.h 라이브러리의 printf 함수
+
+* 식 문장
 
 * stdio.h 라이브러리의 scanf 함수
 
