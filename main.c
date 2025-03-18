@@ -15,3 +15,7 @@ int array[1]; /* To Do: int 배열 array의 크기를 적절하게 바꿔서 메
 int d = 0xdddddddd;
 int e = 0xeeeeeeee;
 int f = 0xffffffff;
+
+int main() {
+  return 0;
+}
