@@ -32,3 +32,28 @@ unsinged int i = 0; /* 변수 i에는 음이 아닌 값이 저장됩니다 */
 > Even if the implementation defines two or more basic types to have the same representation, they are nevertheless different types.
 >
 > Integral and ... types are collectively called arithmetic types. ...
+
+[3.5.2 Type specifiers](https://port70.net/~nsz/c/c89/c89-draft.html#3.5)
+> **Constraints**
+> Each list of type specifiers shall be one of the following sets;
+> the type specifiers may occur in any order,
+> possibly intermixed with the other declaration specifiers.
+>
+> signed char
+>
+> unsigned char
+>
+> short, signed short, short int, or signed short int
+>
+> unsigned short, or unsigned short int
+>
+> int, signed, signed int, or ...
+>
+> unsigned, or unsigned int
+>
+> long, signed long, long int, or signed long int
+>
+> unsigned long, or unsigned long int
+>
+> **Semantics**
+> Each of the above comma-seperated lists designates the same type, ...
