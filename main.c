@@ -8,4 +8,10 @@
  * 배열은 메모리에 같은 타입 여러개를 연달아 저장할 수 있는 타입입니다.  
  */
 
-int i; /* To Do: i의 타입을 크기 10인 int 배열 타입으로 바꿔보세요 */
+int a = 0xaaaaaaaa;
+int b = 0xbbbbbbbb;
+int c = 0xcccccccc;
+int array[1]; /* To Do: int 배열 array의 크기를 적절하게 바꿔서 메모리 창에서 a와 d, b와 e, c와 f가 같은 세로줄에 있게 만들어보세요 */
+int d = 0xdddddddd;
+int e = 0xeeeeeeee;
+int f = 0xffffffff;
