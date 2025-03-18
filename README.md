@@ -22,3 +22,8 @@ int *pi = &i; /* int 포인터 타입의 전역변수 pi, 초기값은 i의 주�
 >
 > The result of the unary & (address-of) operator is a pointer to the object or function designated by
 > its operand. If the operand has type " type ", the result has type "pointer to type ".
+
+[3.2.2.1 Lvalues and function designators](https://port70.net/~nsz/c/c89/c89-draft.html#3.2.2.1)
+> An lavalue is an expression (with an object type ...) that designates an object. ...
+> Except when it is the operand of ... the unary & operator, ... an lavalue ... is converted to the
+> value stored in the designated object (and is no longer an lvalue). 
