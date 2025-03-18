@@ -13,11 +13,9 @@
 
 int a = 0xaaaaaaaa;
 int b = 0xbbbbbbbb;
+int array[2] = {0xab, 0xc0}; /* To Do: int 배열 array의 크기를 적절하게 바꿔서 메모리 창에서 a와 c, b와 d가 같은 세로줄에 있게 만들어보세요 */
 int c = 0xcccccccc;
-int array[2] = {0xab, 0xc0}; /* To Do: int 배열 array의 크기를 적절하게 바꿔서 메모리 창에서 a와 d, b와 e, c와 f가 같은 세로줄에 있게 만들어보세요 */
 int d = 0xdddddddd;
-int e = 0xeeeeeeee;
-int f = 0xffffffff;
 
 int main() {
   return 0;
