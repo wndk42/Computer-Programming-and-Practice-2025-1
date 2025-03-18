@@ -16,6 +16,7 @@ int *pi = &i; /* int 포인터 타입의 전역변수 pi, 초기값은 i의 주�
 #### 관련 C89 표준
 [3.3.3.2 Address and indirection operators](https://port70.net/~nsz/c/c89/c89-draft.html#3.3.3.2)
 > **Constraints**
+> 
 > The operand of the unary & operator shall be either a function designator or an lvalue that designates an object ...
 >
 > **Semantics**
