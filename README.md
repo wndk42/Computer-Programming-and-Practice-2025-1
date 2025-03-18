@@ -35,6 +35,7 @@ unsinged int i = 0; /* 변수 i에는 음이 아닌 값이 저장됩니다 */
 
 [3.5.2 Type specifiers](https://port70.net/~nsz/c/c89/c89-draft.html#3.5)
 > **Constraints**
+> 
 > Each list of type specifiers shall be one of the following sets;
 > the type specifiers may occur in any order,
 > possibly intermixed with the other declaration specifiers.
@@ -56,4 +57,5 @@ unsinged int i = 0; /* 변수 i에는 음이 아닌 값이 저장됩니다 */
 > unsigned long, or unsigned long int
 >
 > **Semantics**
+> 
 > Each of the above comma-seperated lists designates the same type, ...
