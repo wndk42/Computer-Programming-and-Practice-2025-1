@@ -9,7 +9,7 @@
  */
 
 int i = -1; 
-int *pi; /* To Do: pi의 초기값을 i의 주소로 바꿔보세요 */
+/* To Do: 디버그 창 조사식에서 i의 주소를 확인해보세요 */
 
 int main() {
   return 0;
