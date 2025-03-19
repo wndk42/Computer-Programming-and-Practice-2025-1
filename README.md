@@ -1,10 +1,6 @@
-# 전역변수선언
-변수는 값을 저장할 수 있는 메모리 공간입니다. 
-전역변수는 소스 파일에 있는 모든 코드에서 쓸 수 있습니다. 
-같은 전역변수를 여러번 선언할 경우 한번만 메모리 공간을 할당받습니다.
-전역변수 선언에서 초기화를 하면 처음 메모리 공간을 할당받을 때 초기값을 저장합니다.
-한 전역변수에 대해서 초기화는 한번만 할 수 있습니다. 
-전역변수의 초기값으로는 상수만 쓸 수 있습니다. 
+# 지역변수선언
+지역변수는 함수 안에서 쓴다고 선언된 변수입니다. 
+지역변수를 선언하는 문법과 전역변수를 선언하는 문법은 똑같습니다.
 
 초기값이 없는 변수선언은 `타입` `이름` `;` 형태로 합니다.
 
@@ -12,32 +8,64 @@
 
 #### 코드 예시:
 ```c
-int x = 1; /* 초기값이 1인 int 타입의 전역변수 x를 선언하고, 메모리 공간을 할당받음 */
-int x; /* int 타입의 전역변수 x를 선언. 메모리 공간은 앞에서 할당받았으므로 할당받지 않음 */
+void f() {
+   int x = 1; /* f 함수를 실행할 때마다 새로 할당되고 없어지는 변수 x */
+}
 
-int get_x() {
-   return x; /* 함수 정의의 문장리스트에서 x의 값에 접근 가능 */
+void g() {
+   int x = 2; /* g 함수를 실행할 때마다 새로 할당되고 없어지는 변수 x */
 }
 ```
 
 # 관련 C89 표준
-3.7 EXTERNAL DEFINITIONS
+3.1.2.1 Scopes of identifiers
 >
->Semantics
+> An identifier is visible (i.e., can be used) only within a region of program text called its scope.
+> There are ... kinds of scopes: ... , file, block, and function prototype.
+> (A function prototype is a declaration of a function that declares the types of its parameters).
 >
->... An external definition is an external declaration that is also a definition of a function or an object
->If an identifier declared with external linkage is used in an expressioin (...),
->somewhere in the entire program there shall exactly one external definition for the identifier.
+> ... identifier has scope determined by the placement of its declaration ...
+> If the declarator ... that declares the identifier appears outside of any block or list of parameters,
+> the identifier has file scope, which terminates at the end of the translation unit.
+> If the declarator ... that declares the identifier appears inside a block or
+> within the list of parameter declarations in a function definition,
+> the identifier has block scope, which terminates at the } that closes the associated block.
+> If the declarator ... that declares the identifier appears within the list of parameter declarations
+> in a function prototype (not part of a function definition), the identifier has function prototype scope,
+> which terminates at the end of the function declarator.
+> If an outer declaration of a lexically identical identifier exists in the same name space,
+> it is hidden until the current scope terminates, after which it again becomes visible.
 
-3.7.2 External object definitions
+3.1.2.2 Linkage of identifiers
 >
->Semantics
+> An identifier declared in different scopes or in the same scope more than once can be made to refer
+> to the same object or function by a process called linkage. There are three kinds of linkage:
+> external, internal, and none.
 >
->If the declaration of an identifier has file scope and an initializer,
->the declaration is an external definition for the identifier.
+> In the set of translation units and libraries that constitutes an entire program,
+> each instance of a particular identifier with external linkage denotes the same object or function.
+> Within one translation unit, each instance of an identifier with internal linkage denotes the
+> same obejct or function.
+> Identifiers with no linkage denote unique entities.
 >
->A declaration of an identifier for an object that has file scope without an initializer, ..., constitutes a tentative definition.
->If a translation unit contains one or more tentative definitions for an identifier,
->and the translation unit contains no external definition for that identifier,
->then the behavior is exactly as if the translation unit contains a file scope declaration of that identifier,
->with an initializer equal to 0. ...
+> The following identifiers have no linkage: ... an identifier declared to be a function parameter;
+> an identifier declared to be an object inside a block witout the storage-class specifier extern.
+
+3.1.2.4 Storage durations of objects
+>
+> an object has a storage duration that determines its lifetime.
+> There are two storage durations: static and automatic.
+> An object declared with no linkage and without the storage-class specifier static has
+> automatic storage duration. Storage is guaranteed to be reserved for a new instance of such an object
+> on each normal entry into the block in which it is declared ...
+> If an initialization is specified for the value stored in the object, it is performed on each normal entry
+> ... Storage for the object is no longer guaranteed to be reserved when execution of the block ends in
+> any way. (Entering an enclosed block suspends but does not end execution of the enclosing block.
+> Calling a function that returns suspends but does not end execution of the block containing the call.)
+> The value of a pointer that referred to an object with automatic storage duration that is no longer
+>guranteed to be reserved is indeterminate. 
+
+1.6 DEFINITIONS OF TERMS
+> Object ---  region of data storage in the execution environment, the contents of which can represent
+> values. Except for bit-fields, objects are compsoed of contiguous sequences of one or more bytes,
+> the number, order, and encoding of which are either explicitly specified or implementation-defined.
