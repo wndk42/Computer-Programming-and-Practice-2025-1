@@ -60,5 +60,6 @@ int main() {
 4.9.6.1 The fprintf function
 >
 > **Description**
+>
 > The fprintf function writes output to the stream pointed to by stream, under control of the string
 > pointed to by format that specifies how subsequent arguments are converted for output. 
