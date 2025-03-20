@@ -11,4 +11,9 @@
       <Filter>c 소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="print_char.c">
+      <Filter>c 소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>
